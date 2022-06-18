@@ -8,16 +8,16 @@ function stories() {
   const [suggestions, setSuggestions] = useState([]);
 
   
-    useEffect(() => {
-        const suggestions = [...Array(20)].map((_, i) => ({
-           
-            id:i,
-            username:faker.internet.userName(),
-            avater:faker.image.avatar()
-           
-        }));
-        setSuggestions(suggestions);
-    },[]);
+  useEffect(() => {
+    const suggestions = [...Array(20)].map((_, i) => ({
+       
+        id:i,
+        username:faker.internet.userName(),
+        avater:faker.image.avatar()
+       
+    }));
+    setSuggestions(suggestions);
+},[]);
 
   return (
     <div className="flex space-x-2 p-6 bg-white mt-8 border-gray-200 border rounded-sm overflow-x-scroll 

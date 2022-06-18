@@ -18,6 +18,8 @@ export default function Home() {
       {/*Header*/}
  
       <Header />
+
+      {/*Feed*/}
       <Feed />
 
 
