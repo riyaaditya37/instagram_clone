@@ -15,6 +15,7 @@ import {
 
 function Header() {
   const { data: session } = useSession();
+  
   const [open, setOpen] = useRecoilState(modalState);
   const router = useRouter();
 
