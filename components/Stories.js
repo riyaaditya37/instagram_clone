@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import {useSession} from "next-auth/react";
 
 function Stories() {
-  const {data:session} = useSession() ;
+  const { data: session, status } = useSession()
   const [suggestions, setSuggestions] = useState([]);
 
   
@@ -31,7 +31,7 @@ function Stories() {
       {/*  list of stories */}
       {suggestions.map((profile) => (
         <Story
-          keys={profile.id}
+          key={profile.id}
           img={profile.avater}
           username={profile.username}
         />
